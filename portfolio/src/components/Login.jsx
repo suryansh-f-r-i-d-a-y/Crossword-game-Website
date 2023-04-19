@@ -22,8 +22,8 @@ import { Formik, useFormik } from "formik";
           //   response.redirect('/LandingPage');
           // }
           console.log(response);
-
-          alert ("login sucessful")
+          alert ("login successful, please go to link http://localhost:3000/LandingPage ")
+          
         })
         .catch(function (error) {
           console.log("axios request")
