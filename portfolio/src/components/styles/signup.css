@@ -1,0 +1,25 @@
+.error-name{
+  font-size: small;  
+  position: absolute;
+  top: 10vh;
+  color:#ff0000;
+}
+.error-email{
+    font-size: small;  
+    position: absolute;
+    color: #ff0000;
+}
+
+.error-password{
+    font-size: small;  
+    position: absolute;
+    top:5.5vh;
+    color: #ff0000;
+}
+
+.error-pass{
+    font-size: small;  
+    position: absolute;
+    top: 9.8vh;
+    color: #ff0000;
+}

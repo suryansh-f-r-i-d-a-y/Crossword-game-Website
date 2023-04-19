@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    list-style: none;
+
+}
+:root{
+    --bg-color: #222327;
+    --text-color: #fff;
+    --main-color: #29fd53;
+}
+
+.head{
+    position: fixed;
+    width: 100%;
+    top:0;
+    font-weight: 800;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 10px 3%;
+    transition: all .50s ease;
+}
+.main-brand{
+    z-index: 1000;
+}
+
+.head a{
+    text-decoration: none;
+}
+
+
+.navbar{
+    display:flex;
+    margin-bottom: 0px;
+}
+
+.navbar a{
+    color: #717173;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50 ease;
+    text-decoration: none;
+
+}
+
+.navbar a:hover{
+    color: black;
+}
+
+navbar a:active{
+    color: black;
+}
+
+@media(max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: 0.2s;
+    }
+
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+
+@media(max-width: 768px){
+    .navbar a{
+        display: none;
+    }
+}
+
+
+
+/*  ======================================= */
+/* menu-btn */
+
+.menu-btn{
+    width: 3rem;
+    height: 1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    cursor: pointer;
+    position: relative;
+    z-index: 2001;
+}
+
+.hamburger {
+    width: 20px;
+    height: 0.2rem;
+    background: #717173;
+    transition: 0.25s ease-in-out;
+    border-radius: 20px;
+}
+
+
+.menu{
+   position: absolute;
+   top: 0;
+   right: 0;
+   left:0;
+   bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    z-index: 600;
+    transition:  500ms
+}
+
+.burger-brand{
+    font-size: 2rem;
+   padding: 1rem;
+   text-decoration: underline;
+   position: relative;
+   bottom: 3vh;
+   right: 3vw;
+}
+
+.burger-list{
+    font-size:1.5rem;
+    padding: 2rem;
+    
+}
+
+.burger-list a:hover{
+
+    font-size: 2rem ;
+    transition: 0.3s ease-in-out ;
+}
+
+
+.login-btn{
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 4px 14px;
+    background-color: #4070f4;
+    border-radius: 25px;
+    margin: 14px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    right:6vw
+}
+.login-btn:hover{
+    background-color: #265df2;
+}
+
+
+
+
+
+
+/* animations  */
+/* clicked  */
+
+
+.hamburger.clicked:nth-child(1){
+    transform: rotate(45deg) ;
+    transform-origin: top left;
+    transition: ease-in-out 0.5s;
+    background: black;
+}
+
+.hamburger.clicked:nth-child(2){
+    background: transparent;
+    transition: ease-in-out 0.3s;
+}
+
+.hamburger.clicked:nth-child(3) 
+{
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+    transition: ease-in-out 0.5s;
+    background: black;
+}
+
+/* unclick */
+
+.hamburger.unclicked{
+    transform: rotate(0); 
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: inherit;
+}
