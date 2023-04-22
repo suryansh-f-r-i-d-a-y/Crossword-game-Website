@@ -4,4 +4,4 @@ const handleError = (status, message) => {
   error.message = message;
   return error;
 };
-module.exports = handleError
+module.exports = {handleError}

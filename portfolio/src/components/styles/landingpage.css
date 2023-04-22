@@ -6,7 +6,8 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #efefef;
+    /* background-color: #efefef; */
+    background: linear-gradient(rgba(117,78,167,0.1),rgba(117,78,167,0.6));
 }
 
 .card-image{
@@ -47,7 +48,7 @@ position:relative;
     object-fit: cover;
 }
 
-.button {
+.button-landing {
     border: none;
     font-size: 16px;
     color: #fff;

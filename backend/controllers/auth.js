@@ -26,7 +26,7 @@ var User = require("../models/user.js");
     }
 };
 
- const signin = async (req, res, next) => {
+const signin = async (req, res, next) => {
     try {
         const user = await User.findOne({ email: req.body.email });
 

@@ -26,7 +26,7 @@ dotenv.config();
 const connect = () => {
     mongoose.set("strictQuery", false);
     mongoose
-        .connect("mongodb+srv://suryansh1016star:Ansh123468@cluster0.1zduhy5.mongodb.net/test")
+        .connect("mongodb://0.0.0.0:27017/")
         .then(() => {
             console.log("connect to mongodb database");
         })

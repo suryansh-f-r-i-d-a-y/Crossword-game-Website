@@ -11,7 +11,7 @@ const initialValues = {
   name: "",
   lastname: "",
   email: "",
-  password: "",
+  password: "", 
 };
 
 const Signup = () => {
@@ -78,7 +78,7 @@ const Signup = () => {
                   <Input
                     type="name"
                     name="name"
-                    value={values.name}
+                    value=""
                     onChange={handleChange}
                     onBlur={handleBlur}
                     onchange={(e) => this.setState({ fname: e.targeet.value })}

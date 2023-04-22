@@ -1,0 +1,124 @@
+.section-main3{
+    background-image: url("../images/anime4.jpg");
+    background-size: cover;
+    height: 83vh;
+    /* padding-top: 60px; */
+    margin:7.5vh 1vw 1vh 1vw;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    border-radius:10px ;
+}
+
+
+.return{
+    font-size: 2rem;
+    color: #fff;
+    height: 37px;
+    width: 37px;
+    padding-left: 2px;
+    border-radius:10px ;
+    background: #4070f4;
+    backdrop-filter: blur(30px);
+    position: absolute;
+    top: 1.7vh;
+    left:2vw;
+}
+.check-button{
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+    background-color: #4070f4;
+    border-radius: 6px;
+    margin: 14px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    left: 11vw;
+    top: 2vh;
+}
+
+
+
+#container{
+    height: 445px;
+    width: 445px;
+    position:relative;
+    backdrop-filter: blur(20px);
+    padding:2px;
+}
+
+.cell {
+    height: 40px;
+    width: 40px;
+    margin: 2px;
+    clip-path: insert(2px 2px 2px 2px);
+    background:rgba(0, 0, 0, 0.2);
+    float: left;
+    backdrop-filter: blur(30px);
+}
+
+
+
+.cell input{
+    background: transparent;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: large;
+    color: black;
+    border:2px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    
+}
+
+
+
+.block{
+    height: 40px;
+    width: 40px;
+    background: linear-gradient(to right, #000000 , #434343);
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    text-align: center;
+    line-height: 46px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.hints{
+    height: 500px;
+    width:20vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+}
+
+.heading{
+text-align: center;
+padding-top: 1.5rem;
+
+}
+
+.hints p{
+    padding-top: 0rem;
+
+    
+}
+
+.hint-section{
+    text-align: center;
+    max-width: 20vw;
+    padding-top: 3vh;
+}
+
+
+.button{
+    position: relative;
+    top: 2vh;
+    left: 11vw;
+}

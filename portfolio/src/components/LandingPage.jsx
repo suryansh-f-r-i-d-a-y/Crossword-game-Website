@@ -2,14 +2,17 @@
     import './styles/landingpage.css'
     import game1_img from './images/space.jpg'
     import avengers from './images/avengers.jpg'
-    import anime from './images/anime.jpg'
+    import anime from './images/anime4.jpg'
     import user_pic from './images/user_img.jpg'
+    import { useAuth0 } from '@auth0/auth0-react'
 
     import { Link } from 'react-router-dom'
 
-    export default function LandingPage(props) {
+    export default function LandingPage() {
 
-    return (
+      const { user, isAuthenticated, loginWithRedirect } = useAuth0();
+    
+      return (
         <>
         <section className='landing-main'>
         <div className='games-space'>
@@ -26,7 +29,9 @@
     <img src={game1_img} className="card-img image-content d-block w-100" alt="..."/>
     </div>
       <div className=" cr-back carousel-caption d-none d-md-block">
-        <Link to='/Game1'><button className='button'> play now </button></Link>
+
+
+      {isAuthenticated ? (<Link to='/Game1'><button className='button-landing'> play now </button></Link>) : (<button className="button-landing" onClick={() => loginWithRedirect()}> Log In to play</button>)}
         
 
         <p>Lets go on a space adventure and explore things.</p>
@@ -38,7 +43,8 @@
         <img src={avengers} className="card-img d-block w-100" alt="..."/>
       </div>
       <div className="cr-back carousel-caption d-none d-md-block">
-      <button className='button'> play now </button>
+        {isAuthenticated ? (<Link to='/Game2'><button className='button-landing'> play now </button></Link>) : (<button className="button-landing" onClick={() => loginWithRedirect()}> Log In to play</button>)}
+      
         <p>Are you ready for some super hero action.</p>
       </div>
     </div>
@@ -47,10 +53,10 @@
       <img src={anime} className="card-img d-block w-100" alt="..."/>
       </div>
       <div className="cr-back carousel-caption d-none d-md-block">
-       
-       <Link to='/Game1'>
-       <button className='button'> play now </button>
-       </Link>
+      {isAuthenticated ? (<Link to='/Game3'>
+      <button className='button-landing'> play now </button>
+      </Link>) : (<button className="button-landing" onClick={() => loginWithRedirect()}> Log In to play</button>) }
+      
       
         <p>Lets see how much you know about your favouraite anime.</p>
       </div>
@@ -96,13 +102,13 @@
         <div className="user-data">
           <img className='user-img' src={user_pic} alt="error loading" />
             <h4>
-                welcome {props.user + "!"}
+                welcome {isAuthenticated && <p>{user.nickname}</p>  }
             </h4>
 
             <h5>Stats</h5>
 
             <p>puzzles solved : </p>
-            <p>Time spent : </p>
+            {/* <p>Time spent : </p> */}
 
   
         </div>

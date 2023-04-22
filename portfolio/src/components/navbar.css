@@ -121,6 +121,20 @@ navbar a:active{
     transition:  500ms
 }
 
+.for-background{
+    position: absolute;
+    top:0;
+    right: 0;
+    left:0;
+    bottom: 0;
+    background: linear-gradient(rgba(117,78,167,0.1),rgba(117,78,167,0.6));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 600;
+    transition:  500ms
+}
+
 .burger-brand{
     font-size: 2rem;
    padding: 1rem;
@@ -139,7 +153,7 @@ navbar a:active{
 .burger-list a:hover{
 
     font-size: 2rem ;
-    transition: 0.3s ease-in-out ;
+    transition: 0.3s ease-in-out ;;
 }
 
 
